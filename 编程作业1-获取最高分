@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace projGetMaxScore
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int sscore=0;
+            string sname="";
+            int[] score = new int[8]{89,90,98,56,60,91,93,85};
+            string[] name= new string[8]{"吴松","钱东宇","伏晨","陈陆","周蕊","林日鹏","何昆","关欣"};
+            
+            for(int x=0;x<8;x++ )
+            {
+                if(sscore<score[x])
+                {sscore=score[x];sname=name[x];}
+                
+            }
+            Console.Write("分数最高的是{0}，分数是{1}",sname,sscore);
+        }
+    }
+}
