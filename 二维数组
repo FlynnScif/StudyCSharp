@@ -7,3 +7,16 @@ static void Main(string[] args)
     Console.WriteLine("语文：{0},数学：{1}",score[i,0],score[i,1]);
    }
  }
+
+
+
+------未测试
+string[] name = {"吴松","钱东宇","伏晨","陈陆","周蕊","林日鹏","何昆","关欣"};
+
+int[] score = {89,90,98,56,60,91,93,85};
+
+int key = -1;
+
+if (name.Length==score.Length) for(int i=0; i<score.Length; i++) key = (key<0||score[i]>score[key])?i:key;
+
+if(key>=0) Console.WriteLine("分数最高的是{0}，分数是{1}",name[key],score[key]);
